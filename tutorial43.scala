@@ -5,19 +5,16 @@ object main extends App{
     def toLower(name2: String): String={ 
         name2.toLowerCase()
     }
-    def formatNames(name: String, formatter: String => String): String = {
-        formatter(name)
+    def changeNames(name: String, change: String => String): String = {
+        change(name)
     }
 
     val names = List("Benny", "Niroshan", "Saman", "Kumara")
 
     names.foreach { name =>
-    val formattedName = formatNames(name, toUpper)
-    println(formattedName)
+    val changedName = changeNames(name, toUpper)
+    println(changedName)
     }
-    names.foreach { name =>
-    val formattedName = formatNames(name, toLower)
-    println(formattedName)
-    }
+    
 }
    
